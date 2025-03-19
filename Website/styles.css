@@ -1,0 +1,121 @@
+/* Colors */
+:root {
+    --navy-blue: #001f3d;
+    --dark-purple: #4b0082;
+    --white: #ffffff;
+    --yellow: #ffcc00;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--white);
+    color: var(--navy-blue);
+}
+
+/* Header */
+header {
+    background-color: var(--dark-purple);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+header .logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex; /* Horizontal menu by default */
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hamburger Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* Main Content */
+main {
+    margin-top: 100px; /* Offset content from the header */
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+section h2 {
+    color: var(--dark-purple);
+}
+
+/* Footer */
+footer {
+    background-color: var(--navy-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide the menu by default */
+        flex-direction: column;
+        background-color: var(--navy-blue);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        background-color: var(--navy-blue);
+        color: var(--white);
+        text-decoration: none;
+    }
+
+    /* Show the hamburger button on small screens */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Show menu when 'active' class is added */
+    .menu.active {
+        display: flex;
+    }
+}
